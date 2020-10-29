@@ -1,7 +1,8 @@
 /* global $ */
 
-import 'summernote/dist/summernote';
-import 'summernote/dist/summernote.css';
+
+import 'summernote/dist/summernote-bs4';
+import 'summernote/dist/summernote-bs4.css';
 import 'codemirror/lib/codemirror.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -188,7 +189,8 @@ class ReactSummernote extends Component {
       onKeydown: props.onKeyDown,
       onPaste: props.onPaste,
       onChange: props.onChange,
-      onImageUpload: this.onImageUpload
+      onChangeCodeview: props.onChangeCodeview,
+      onImageUpload: this.onImageUpload,
     };
   }
 
@@ -218,7 +220,8 @@ ReactSummernote.propTypes = {
   onKeyDown: PropTypes.func,
   onPaste: PropTypes.func,
   onChange: PropTypes.func,
-  onImageUpload: PropTypes.func
+  onImageUpload: PropTypes.func,
+  onChangeCodeview: PropTypes.func
 };
 
 ReactSummernote.defaultProps = {
