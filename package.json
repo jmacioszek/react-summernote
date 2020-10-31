@@ -37,7 +37,7 @@
   "peerDependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^2.2.0 || ^3.0.0",
-    "react": "^16.2.0",
+    "react": "*",
     "react-dom": "*"
   },
   "devDependencies": {

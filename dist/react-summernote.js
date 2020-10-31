@@ -11391,10 +11391,6 @@ var ReactSummernote = function (_Component) {
     ReactSummernote.insertImage = _this.insertImage.bind(_this);
     ReactSummernote.insertNode = _this.insertNode.bind(_this);
     ReactSummernote.insertText = _this.insertText.bind(_this);
-
-    if (_this.props.value) {
-      _this.replace(_this.props.value);
-    }
     return _this;
   }
 
@@ -11410,6 +11406,10 @@ var ReactSummernote = function (_Component) {
       this.editor.summernote(options);
       if (codeview) {
         this.editor.summernote('codeview.activate');
+      }
+
+      if (this.props.value) {
+        this.replace(this.props.value);
       }
     }
   }, {

@@ -41,10 +41,6 @@ class ReactSummernote extends Component {
     ReactSummernote.insertImage = this.insertImage.bind(this);
     ReactSummernote.insertNode = this.insertNode.bind(this);
     ReactSummernote.insertText = this.insertText.bind(this);
-  
-    if (this.props.value) {
-      this.replace(this.props.value);
-    }
   }
 
   componentDidMount() {
@@ -57,6 +53,10 @@ class ReactSummernote extends Component {
     this.editor.summernote(options);
     if (codeview) {
       this.editor.summernote('codeview.activate');
+    }
+  
+    if (this.props.value) {
+      this.replace(this.props.value);
     }
   }
 
